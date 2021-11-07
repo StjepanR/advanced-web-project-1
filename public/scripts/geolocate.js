@@ -15,7 +15,7 @@ function initMap() {
 }
 
 function locateMe() {
-    const status = document.getElementById('status');
+//    const status = document.getElementById('status');
 
     function success(position) {
         const latitude  = position.coords.latitude;
@@ -30,17 +30,17 @@ function locateMe() {
 
         addMarkers({latitude: latitude, longitude: longitude})
 
-        status.textContent = '';
+//        status.textContent = '';
     }
 
     function error() {
-        status.textContent = 'Unable to retrieve your location';
+//        status.textContent = 'Unable to retrieve your location';
     }
 
     if(!navigator.geolocation) {
-        status.textContent = 'Geolocation is not supported by your browser';
+//        status.textContent = 'Geolocation is not supported by your browser';
     } else {
-        status.textContent = 'Locating…';
+//        status.textContent = 'Locating…';
         navigator.geolocation.getCurrentPosition(success, error);
     }
 }
@@ -59,7 +59,7 @@ function addMarkers(position) {
     }).then(response => {
         console.log(response)
         name = response.data.name
-        console.log(response.status) //200 OK
+//        console.log(response.status) //200 OK
     }).catch(error => {
         console.log("ERROR: " + error);
     });
