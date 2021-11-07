@@ -7,7 +7,7 @@ var markers = new Set();
 
 router.get('/', requiresAuth(), function(req, res) {
     res.json(
-        JSON.stringify(markers)
+        markers
     );
 });
 
