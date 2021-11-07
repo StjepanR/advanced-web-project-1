@@ -66,3 +66,16 @@ function addMarkers(position) {
 
     addMarker({latitude: position.latitude, longitude: position.longitude, name: name})
 }
+
+function displayMarkers() {
+    axios.get('/markers').then(response => {
+        console.log(response.body)
+        response.body.forEach(user => {
+            markerLayer.addLayer(addMarkerForUser(user));
+        });
+        markerLayer.addTo(map);
+        map.fitBounds(markerLayer.getBounds());
+    }).catch(error => {
+        console.log("ERROR: " + error);
+    });
+}
