@@ -86,7 +86,7 @@ function displayMarkers() {
             featureGroup.clearLayers();
         }
         for (const position in response.data) {
-            featureGroup.addLayer(addMarker({latitude: position.latitude, longitude: position.longitude}));
+            featureGroup.addLayer(L.marker([position.latitude, position.longitude]).bindPopup(position.name));
         }
         featureGroup.addTo(map);
         map.fitBounds(featureGroup.getBounds());
