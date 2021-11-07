@@ -12,10 +12,10 @@ router.get('/', function(req, res) {
 });
 
 router.post('/',
-    requiresAuth(),
     check('latitude').not().isEmpty().withMessage('Latitude is requierd'),
     check('longitude').not().isEmpty().withMessage('Longitude is required'),
-    function(req, res) {
+    (req, res) => {
+        console.log(req.body)
         markers.add({latitude: req.body.latitude, longitude: req.body.longitude, name: req.oidc.user})
         res.json(
             JSON.stringify(req.oidc.user)

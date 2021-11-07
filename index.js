@@ -26,6 +26,7 @@ const config = {
     },
 };
 
+app.use(express.json());
 app.use(auth(config));
 
 app.get('/',  function (req, res) {

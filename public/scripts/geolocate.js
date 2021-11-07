@@ -57,7 +57,11 @@ function addMarkers(position) {
     axios.post('/markers', {
         latitude: position.latitude,
         longitude: position.longitude
-    }).then(response => {
+    },
+    {
+        headers: { "Content-Type": "application/json" }
+    }
+    ).then(response => {
         console.log(response)
         name = response.data.name
 //        console.log(response.status) //200 OK
