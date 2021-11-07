@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8300a58a-5be1-44b9-8d21-2d075aa6c8bb" name="Changes" comment="Show all markers">
+    <list default="true" id="8300a58a-5be1-44b9-8d21-2d075aa6c8bb" name="Changes" comment="Fix Get ALl Locations path">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/partials/nav.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/nav.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +74,7 @@
       <workItem from="1635957859129" duration="1806000" />
       <workItem from="1636038200131" duration="16771000" />
       <workItem from="1636124995864" duration="298000" />
-      <workItem from="1636127545874" duration="28682000" />
+      <workItem from="1636127545874" duration="29700000" />
     </task>
     <task id="LOCAL-00001" summary="Add https, auth0 and map view">
       <created>1636320216206</created>
@@ -102,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636321717110</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fix Get ALl Locations path">
+      <created>1636321902871</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1636321902871</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +135,7 @@
     <MESSAGE value="Add PORT to .env" />
     <MESSAGE value="Remove auth on /" />
     <MESSAGE value="Show all markers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Show all markers" />
+    <MESSAGE value="Fix Get ALl Locations path" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Get ALl Locations path" />
   </component>
 </project>

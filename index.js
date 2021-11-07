@@ -49,13 +49,17 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', homeRouter);
 app.use('/markers', markersRouter);
 
-if ( process.env.PORT) {
+if (process.env.PORT) {
     app.listen(process.env.PORT);
+    console.log(`Server running at https://localhost:${process.env.PORT}/`);
 } else {
     https.createServer({
         key: fs.readFileSync('key.pem'),
         cert: fs.readFileSync('cert.pem')
-    }, app);
+    }, app)
+    .listen(PORT, function () {
+        console.log(`Server running at https://localhost:${PORT}/`);
+    });
 }
 
 
