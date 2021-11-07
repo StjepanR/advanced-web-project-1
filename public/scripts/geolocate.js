@@ -73,23 +73,15 @@ function addMarkers(position) {
 }
 
 function displayMarkers() {
-    var showMarkers = false;
-    if (featureGroup == undefined) {
-        featureGroup = new L.FeatureGroup()
-    } else {
-        showMarkers = true
-    }
+    featureGroup = new L.FeatureGroup()
 
     axios.get('/markers').then(response => {
-        console.log(response)
-        if(showMarkers){
-            featureGroup.clearLayers();
-        }
+        featureGroup.addTo(mapa);
         for (const position in response.data) {
             featureGroup.addLayer(L.marker([response.data[position].latitude, response.data[position].longitude]).bindPopup(response.data[position].name));
         }
-        featureGroup.addTo(map);
-        map.fitBounds(featureGroup.getBounds());
+
+        mapa.fitBounds(featureGroup.getBounds());
     }).catch(error => {
         console.log("ERROR: " + error);
     });
