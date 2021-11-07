@@ -84,7 +84,7 @@
       <workItem from="1635957859129" duration="1806000" />
       <workItem from="1636038200131" duration="16771000" />
       <workItem from="1636124995864" duration="298000" />
-      <workItem from="1636127545874" duration="34267000" />
+      <workItem from="1636127545874" duration="35062000" />
     </task>
     <task id="LOCAL-00001" summary="Add https, auth0 and map view">
       <created>1636320216206</created>
@@ -184,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636327180954</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fix">
+      <created>1636327499471</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1636327499471</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
