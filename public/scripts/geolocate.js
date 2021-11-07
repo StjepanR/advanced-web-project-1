@@ -1,4 +1,5 @@
 var mapa;
+var featureGroup;
 
 function initMap() {
 
