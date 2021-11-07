@@ -29,12 +29,12 @@ const config = {
 app.use(auth(config));
 
 app.get('/',  function (req, res) {
-    req.user = {
-        isAuthenticated : req.oidc.isAuthenticated()
-    };
-    if (req.user.isAuthenticated) {
-        req.user.name = req.oidc.user.name;
-    }
+    // req.user = {
+    //     isAuthenticated : req.oidc.isAuthenticated()
+    // };
+    // if (req.user.isAuthenticated) {
+    //     req.user.name = req.oidc.user.name;
+    // }
     res.render('pages/index', {user : req.user});
 });
 
