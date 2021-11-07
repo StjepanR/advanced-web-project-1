@@ -69,8 +69,8 @@ function addMarkers(position) {
 
 function displayMarkers() {
     axios.get('/markers').then(response => {
-        console.log(response.body)
-        response.body.forEach(user => {
+        console.log(response)
+        response.data.forEach(user => {
             markerLayer.addLayer(addMarkerForUser(user));
         });
         markerLayer.addTo(map);
