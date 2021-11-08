@@ -25,6 +25,9 @@ router.post('/',
                 email: req.oidc.user.email,
                 time: req.oidc.user.updated_at
             });
+            if (markers.length > 5) {
+                markers.pop();
+            }
         } catch (error) {
             console.log(error)
         }
