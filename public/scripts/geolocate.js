@@ -83,7 +83,7 @@ function displayMarkers() {
         for (const position in response.data) {
             featureGroup
                 .addLayer(L.marker([response.data[position].latitude, response.data[position].longitude]))
-                .bindPopup("ime: " + response.data[position].name + "email: " + response.data[position].email + "vrijeme prijave: " + response.data[position].time);
+                .bindPopup("ime: " + response.data[position].name + " email: " + response.data[position].email + " vrijeme prijave: " + response.data[position].time);
         }
 
         mapa.fitBounds(featureGroup.getBounds());
