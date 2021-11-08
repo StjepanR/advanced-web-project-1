@@ -48,7 +48,7 @@ function locateMe() {
 
 function addMarker(user) {
     L.marker([user.latitude, user.longitude])
-        .bindPopup("ime: " + user.name + " email: " + user.email + " vrijeme prijave: " + user.time)
+        .bindPopup("latitude: " + user.latitude + " longitude: " + user.longitude + " ime: " + user.name + " email: " + user.email + " vrijeme prijave: " + user.time)
         .addTo(mapa);
 }
 
@@ -83,7 +83,7 @@ function displayMarkers() {
         for (const position in response.data) {
             featureGroup
                 .addLayer(L.marker([response.data[position].latitude, response.data[position].longitude]))
-                .bindPopup("ime: " + response.data[position].name + " email: " + response.data[position].email + " vrijeme prijave: " + response.data[position].time);
+                .bindPopup("latitude: " + response.data[position].latitude + " longitude: " + response.data[position].longitude + " ime: "  + response.data[position].name + " email: " + response.data[position].email + " vrijeme prijave: " + response.data[position].time);
         }
 
         mapa.fitBounds(featureGroup.getBounds());
