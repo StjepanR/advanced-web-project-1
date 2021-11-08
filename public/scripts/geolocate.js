@@ -48,14 +48,11 @@ function locateMe() {
 
 function addMarker(user) {
     L.marker([user.latitude, user.longitude])
-        .bindPopup("ime: " + user.name + "\nemail: " + user.email + "\nvrijeme prijave: " + user.time + "\n")
+        .bindPopup("ime: " + user.name + " email: " + user.email + " vrijeme prijave: " + user.time)
         .addTo(mapa);
 }
 
 function addMarkers(position) {
-    var name;
-    var email;
-    var time;
     axios.post('/markers', {
         latitude: position.latitude,
         longitude: position.longitude
@@ -64,17 +61,18 @@ function addMarkers(position) {
         headers: { "Content-Type": "application/json" }
     }
     ).then(response => {
-        var userObject = JSON.parse(response.data)
-        console.log("cc" + response)
-        name = userObject.name
-        time = userObject.updated_at
-        email = userObject.email
+        // var userObject = JSON.parse(response.data)
+        // console.log("cc" + response)
+        // name = response.data.name
+        // time = response.data.time
+        // email = response.data.email
+        addMarker({latitude: position.latitude, longitude: position.longitude, name: response.data.name, time: response.data.time, email: response.data.email});
 //        console.log(response.status) //200 OK
     }).catch(error => {
         console.log("ERROR: " + error);
     });
 
-    addMarker({latitude: position.latitude, longitude: position.longitude, name: name, time: time, email: email});
+
 }
 
 function displayMarkers() {
@@ -85,7 +83,7 @@ function displayMarkers() {
         for (const position in response.data) {
             featureGroup
                 .addLayer(L.marker([response.data[position].latitude, response.data[position].longitude])
-                .bindPopup("ime: " + response.data[position].name) + "\nemail: " + response.data[position].email + "\nvrijeme prijave: " + response.data[position].time);
+                .bindPopup("ime: " + response.data[position].name) + "email: " + response.data[position].email + "vrijeme prijave: " + response.data[position].time);
         }
 
         mapa.fitBounds(featureGroup.getBounds());

@@ -85,7 +85,7 @@
       <workItem from="1635957859129" duration="1806000" />
       <workItem from="1636038200131" duration="16771000" />
       <workItem from="1636124995864" duration="298000" />
-      <workItem from="1636127545874" duration="38126000" />
+      <workItem from="1636127545874" duration="39402000" />
     </task>
     <task id="LOCAL-00001" summary="Add https, auth0 and map view">
       <created>1636320216206</created>
@@ -220,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636329561657</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="fix get locations">
+      <created>1636331561133</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1636331561133</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,7 +264,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/markers.routes.js</url>
-          <line>19</line>
+          <line>20</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="10" />
         </line-breakpoint>
