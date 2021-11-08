@@ -4,7 +4,6 @@
     <list default="true" id="8300a58a-5be1-44b9-8d21-2d075aa6c8bb" name="Changes" comment="fix get locations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/scripts/geolocate.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/scripts/geolocate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/markers.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/markers.routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +84,7 @@
       <workItem from="1635957859129" duration="1806000" />
       <workItem from="1636038200131" duration="16771000" />
       <workItem from="1636124995864" duration="298000" />
-      <workItem from="1636127545874" duration="39402000" />
+      <workItem from="1636127545874" duration="40166000" />
     </task>
     <task id="LOCAL-00001" summary="Add https, auth0 and map view">
       <created>1636320216206</created>
@@ -227,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636331561133</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="fix get locations">
+      <created>1636332639678</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1636332639678</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
