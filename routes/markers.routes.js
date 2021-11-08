@@ -16,9 +16,17 @@ router.post('/',
     check('latitude').not().isEmpty().withMessage('Latitude is requierd'),
     check('longitude').not().isEmpty().withMessage('Longitude is required'),
     (req, res) => {
-        console.log(req.body);
-        markers.push({latitude: req.body.latitude, longitude: req.body.longitude, name: req.oidc.user.name});
-        console.log(markers);
+        try {
+            markers.push({
+                latitude: req.body.latitude,
+                longitude: req.body.longitude,
+                name: req.oidc.user.name,
+                email: req.oidc.user.email,
+                time: req.oidc.user.updated_at
+            });
+        } catch (error) {
+            console.log(error)
+        }
         res.json(
             JSON.stringify(req.oidc.user)
         );
