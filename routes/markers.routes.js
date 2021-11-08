@@ -5,7 +5,9 @@ const router = express.Router();
 
 var markers = [];
 
-router.get('/', function(req, res) {
+router.get('/',
+    requiresAuth(),
+    function(req, res) {
     console.log(markers)
     res.json(
         markers
